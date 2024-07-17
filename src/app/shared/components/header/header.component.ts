@@ -14,6 +14,7 @@ import {FormsModule} from "@angular/forms";
 })
 export class HeaderComponent {
   valorPesquisa = '';
+  numItemsCarrinho = 1;
 
   constructor(private router: Router) {}
 
