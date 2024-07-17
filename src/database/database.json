@@ -1,9 +1,278 @@
 {
-    "produtos":[
-        {
-            "id": "1",
-            "nome": "teste",
-            "descrição": "teste"
-        }
-    ]
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Apple iPhone 13 (128 GB)",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_790522-MLA47782243619_102021-F.webp",
+      "descricao": "O iPhone 13 tem uma tela superbrilhante projetada para ser resistente. Faz vídeos com qualidade de cinema. Seu chip tem uma velocidade impressionante. E ganhou um aumento notável em bateria.",
+      "preco": 3499,
+      "unidadeDisponiveis": 3,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "2",
+      "nome": "Samsung Galaxy A25 (256 GB)",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_637778-MLA74556531647_022024-F.webp",
+      "descricao": "É realmente deslumbrante. O display Super AMOLED de 6,5 polegadas do Galaxy A25 5G expressa imagens com riqueza de cores e detalhes e até 1.000 nits de brilho aprimorado com Vision Booster para visibilidade e nitidez ao ar livre. E mais, o Eye Comfort Shield reduz a luz azul prejudicial, cuidando dos seus olhos de dia e à noite.",
+      "preco": 1329,
+      "unidadeDisponiveis": 6,
+      "promoção": true,
+      "desconto": 0.2
+    },
+    {
+      "id": "3",
+      "nome": "Motorola Moto G84 (256 GB)",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_653613-MLU76654319697_052024-F.webp",
+      "descrição": "O futuro está nas suas mãos com o incrível smartphone Moto g84 5G da Motorola! Com um poderoso processador Snapdragon 695 Octa-core, 8gb de RAM e um genoroso armazenamento de 256GB, este dispositivo foi projetado para oferecer desempenho excepcional em cada tarefa que você realizar.",
+      "preco": 1484,
+      "unidadeDisponiveis": 1,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "4",
+      "nome": "Xiaomi Pocophone Poco X5 (256 GB)",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_622675-MLA54285227753_032023-F.webp",
+      "descrição": "Descubra infinitas possibilidades para suas fotos com as 3 câmeras principais de sua equipe. Teste sua criatividade e jogue com iluminação, diferentes planos e efeitos para obter ótimos resultados.",
+      "preco": 3199,
+      "unidadeDisponiveis": 2,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "5",
+      "nome": "Máquina de Lavar 14kg Electrolux",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_776219-MLA46220181664_052021-F.webp",
+      "descrição": "A Máquina de Lavar 14kg Electrolux Essential Care com Cesto Inox 127v, equipada com cesto de aço inoxidável e dispenser exclusivo Jet&Clean, foi projetada para simplificar as tarefas domésticas relacionadas à lavagem de roupas. A tecnologia Jet&Clean da Electrolux, presente nesta máquina, garante uma distribuição uniforme de sabão e amaciante, evitando manchas e relavagens, enquanto o novo Ultra Filter Pega Fiapos oferece uma capacidade de retenção de sujeira oito vezes maior.",
+      "preco": 1899,
+      "unidadeDisponiveis": 9,
+      "promoção": true,
+      "desconto": 0.1
+    },
+    {
+      "id": "6",
+      "nome": "Máquina de lavar semi-automática Colormaq 10kg",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_979428-MLU75194455651_032024-F.webp",
+      "descrição": "Roupas limpas e bem cuidadas facilitam no dia a dia, ainda mais se você tiver um produto que não dá trabalho e economiza energia, água e sabão. Com o Tanquinho Colormaq 10kg você lava suas roupas com mais eficiência. Ele possui batedor gigante no fundo, filtro de fiapos, tampa translúcida, cinco programas de lavagem e intervalos para molho. A entrada e saída de água são manuais, sendo assim é preciso desencaixar a mangueira e esperar a água escoar.",
+      "preco": 509,
+      "unidadeDisponiveis": 15,
+      "promoção": true,
+      "desconto": 0.4
+    },
+    {
+      "id": "7",
+      "nome": "Cafeteira Britânia Vidro Preto Com Inox",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_752909-MLU73130073840_122023-F.webp",
+      "descrição": "Proporciona mais praticidade e eficiência com capacidade para até 15 cafezinhos e filtro permanente removível para limpeza. Possui sistema corta-pingo que permite a retirada da jarra enquanto o café está sendo preparado. O reservatório de água com graduação indica o nível de água, prático e simples.",
+      "preco": 98,
+      "unidadeDisponiveis": 21,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "8",
+      "nome": "Aquecedor Ventisol Halógeno",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_636729-MLA74805963691_022024-F.webp",
+      "descrição": "Você está procurando aquecer salas pequenas? Manter seus ambiente aquecidos durante o inverno não é mais um problema. O aquecedor elétrico Ventisol AH permite que você aproveite sua casa durante todo o ano de uma forma mais prática e simples.",
+      "preco": 175,
+      "unidadeDisponiveis": 3,
+      "promoção": true,
+      "desconto": 0.1
+    },
+    {
+      "id": "9",
+      "nome": "Copo De Liquidificador Mondial",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_835694-MLU72836486827_112023-F.webp",
+      "descrição": "O Copo De Liquidificador Mondial L-850 L-900w Cristal Preto da marca Micromax é a escolha perfeita para a sua cozinha. Com uma capacidade de 1500 mL, este liquidificador é ideal para preparar sucos, vitaminas, molhos e muito mais. O modelo é compatível com Mondial L-850 L-900W Cristal Preto, proporcionando um design elegante e sofisticado que combina com qualquer decoração de cozinha. Além disso, o copo de cristal preto é resistente e durável, garantindo um uso prolongado. Não perca a oportunidade de ter um produto de alta qualidade que facilitará o seu dia a dia na cozinha.",
+      "preco": 40,
+      "unidadeDisponiveis": 44,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "10",
+      "nome": "Forno de bancada elétrico Moob",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_771476-MLU77377446669_072024-F.webp",
+      "descrição": "Se a sua cozinha é pequena, o forno de mesa é a melhor solução. Você desfrutará das mesmas vantagens que um forno convencional e ganhará praticidade e conforto.",
+      "preco": 593,
+      "unidadeDisponiveis": 28,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "11",
+      "nome": "Jaqueta Casaco Masculina",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_859181-MLB75685472667_042024-F.webp",
+      "descrição": "A Jaqueta Casaco Masculina Bobojaco Gominho Frio Corta Vento é a escolha ideal para homens que valorizam estilo e funcionalidade durante os dias mais frios. Esta peça não apenas protege contra o vento e o frio, mas também se destaca pela sua durabilidade e conforto.",
+      "preco": 78,
+      "unidadeDisponiveis": 9,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "12",
+      "nome": "Monitor Led 21.5''",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_945602-MLU72733465047_112023-F.webp",
+      "descrição": "O Monitor Led 21.5'' 22b1hm5 Aoc, foi projetado para entregar conteúdo de qualidade com excelente transmissão de imagem. Possuindo ótima visibilidade com seu ângulo de visão de 178º/178º graças à tecnologia do Painel VA.",
+      "preco": 480,
+      "unidadeDisponiveis": 13,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "13",
+      "nome": "Jogo De Lençol Elástico Casal Padrão Box 3 ",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_869862-MLB71028916412_082023-F.webp",
+      "descrição": "Jogo de lençol casal padrão cama 3 peças 400 fios toque aveludado. Ideal para cama box de casal padrão.",
+      "preco": 40,
+      "unidadeDisponiveis": 19,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "14",
+      "nome": "Café Torrado em Grãos Espresso Pilã",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_978672-MLA75698756866_042024-F.webp",
+      "descrição": "Desperte seus sentidos com o Café Pilão Espresso Grão 1kg, uma escolha perfeita para apreciadores de café que buscam qualidade e sabor autêntico. Este café é cuidadosamente selecionado e possui um nível de torra médio, ideal para quem aprecia um sabor equilibrado e uma textura suave. Os grãos são 100% puros e torrados na medida certa para garantir o máximo de sabor e aroma.",
+      "preco": 77,
+      "unidadeDisponiveis": 7,
+      "promoção": true,
+      "desconto": 0.1
+    },
+    {
+      "id": "15",
+      "nome": "Alicate Universal 8 Pol Gedore",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_957518-MLU74843913786_032024-F.webp",
+      "descrição": "O Alicate Universal Gedore Profissional é a ferramenta perfeita para qualquer trabalho. Com cabo emborrachado em CRV, proporciona conforto e segurança durante o uso. Sua cabeça antiderrapante garante um agarre firme em qualquer superfície. Este modelo é novo e da renomada marca Gedore, sinônimo de qualidade e durabilidade.",
+      "preco": 40,
+      "unidadeDisponiveis": 3,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "16",
+      "nome": "Aspirador De Pó 12v Makita",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_909308-MLU77417114327_072024-F.webp",
+      "descrição": "Por ser sem fio, você terá uma versatilidade incomparável para levar o produto para qualquer lugar e chegar nos cantos mais difíceis de limpar.",
+      "preco": 189,
+      "unidadeDisponiveis": 26,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "17",
+      "nome": "Fritadeira Air Fryer New Pratic Af-31 Preto Mondial",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_708221-MLB52679584793_122022-F.webp",
+      "descrição": "Air Fryer New Pratic AF-31 da Mondial na cor preta, com tecnologia de circulação de ar que permite fritar alimentos sem uso de óleo. Possui cesto removível com capacidade de 3,5L e potência de 1500W, ideal para o preparo de refeições. Inclui timer de 60 minutos, aviso sonoro com desligamento automático e cesto antiaderente.",
+      "preco": 269,
+      "unidadeDisponiveis": 1,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "18",
+      "nome": "Jogo Taça de Vinho Passion Burgunder 490ml Kit 6pcs",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_713513-MLU71134471985_082023-F.webp",
+      "descrição": "Essa Taça de Vinho conta com a mais avançada tecnologia, com a parede fina em cristal e design elegante para melhorar a sua experiência ao degustar um bom vinho.",
+      "preco": 129,
+      "unidadeDisponiveis": 2,
+      "promoção": true,
+      "desconto": 0.25
+    },
+    {
+      "id": "19",
+      "nome": "Imã De Neodímio P/ Pesca Magnética 200 Kg Tração + Corda",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_946408-MLB53457435985_012023-F.webp",
+      "descrição": "A pesca magnética é semelhante a caça de objetos de metais como deita com detector de metais onde os objetos são descobertos, podendo alcançar uma profundeza ainda maior. Composição. Aço Inox e imã de neodímio.",
+      "preco": 159,
+      "unidadeDisponiveis": 6,
+      "promoção": false,
+      "desconto": 0
+    },
+    {
+      "id": "20",
+      "nome": "Bola De Campo Penalty Matis Xxiv Cor Amarelo",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_966125-MLU75255924658_032024-F.webp",
+      "descrição": "Chegou a hora de mostrar seu jogo e ser considerado o craque da galera. A Penalty criou a nova Bola Campo Bravo XXIV, seu design inovador e suas cores facilitam na visualização durante o domínio da bola!",
+      "preco": 78,
+      "unidadeDisponiveis": 11,
+      "promoção": false,
+      "desconto": 0
+    }
+  ],
+  "vendas": [
+    {
+      "id": "1",
+      "produto_id": "4",
+      "quantidade": "3",
+      "data": "2024-7-12"
+    },
+    {
+      "id": "2",
+      "produto_id": "15",
+      "quantidade": "1",
+      "data": "2024-7-11"
+    },
+    {
+      "id": "3",
+      "produto_id": "15",
+      "quantidade": "17",
+      "data": "2024-7-5"
+    },
+    {
+      "id": "4",
+      "produto_id": "11",
+      "quantidade": "7",
+      "data": "2024-6-22"
+    },
+    {
+      "id": "5",
+      "produto_id": "1",
+      "quantidade": "9",
+      "data": "2024-7-16"
+    }
+  ],
+  "comentarios": [
+    {
+        "id": "1",
+        "produto_id": "1",
+        "comentario": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. At vero nulla, ullam quasi fugit sint pariatur beatae eveniet quo voluptatibus sapiente dolore accusantium rerum? Aliquam architecto optio error assumenda possimus."
+    },
+    {
+        "id": "2",
+        "produto_id": "1",
+        "comentario": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. At vero nulla, ullam quasi fugit sint pariatur beatae eveniet quo voluptatibus sapiente dolore accusantium rerum? Aliquam architecto optio error assumenda possimus."
+    },
+    {
+        "id": "3",
+        "produto_id": "2",
+        "comentario": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. At vero nulla, ullam quasi fugit sint pariatur beatae eveniet quo voluptatibus sapiente dolore accusantium rerum? Aliquam architecto optio error assumenda possimus."
+    },
+    {
+        "id": "4",
+        "produto_id": "2",
+        "comentario": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. At vero nulla, ullam quasi fugit sint pariatur beatae eveniet quo voluptatibus sapiente dolore accusantium rerum? Aliquam architecto optio error assumenda possimus."
+    },
+    {
+        "id": "5",
+        "produto_id": "3",
+        "comentario": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. At vero nulla, ullam quasi fugit sint pariatur beatae eveniet quo voluptatibus sapiente dolore accusantium rerum? Aliquam architecto optio error assumenda possimus."
+    },
+    {
+        "id": "5",
+        "produto_id": "3",
+        "comentario": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. At vero nulla, ullam quasi fugit sint pariatur beatae eveniet quo voluptatibus sapiente dolore accusantium rerum? Aliquam architecto optio error assumenda possimus."
+    },
+    {
+        "id": "5",
+        "produto_id": "4",
+        "comentario": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. At vero nulla, ullam quasi fugit sint pariatur beatae eveniet quo voluptatibus sapiente dolore accusantium rerum? Aliquam architecto optio error assumenda possimus."
+    },
+    {
+        "id": "5",
+        "produto_id": "",
+        "comentario": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. At vero nulla, ullam quasi fugit sint pariatur beatae eveniet quo voluptatibus sapiente dolore accusantium rerum? Aliquam architecto optio error assumenda possimus."
+    }
+  ]
 }
