@@ -1,0 +1,72 @@
+.card {
+  box-sizing: border-box;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 3px 20px -10px rgba(189,189,189,1);
+  transition: box-shadow 0.3s ease-in-out;
+  width: 300px;
+  border-radius: 10px;
+  padding: 0 0 15px 0;
+
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+
+  span {
+    cursor: pointer;
+  }
+
+  hr {
+    border: 1px solid #e5e7eba0;
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+
+  .content {
+    padding: 0 15px;
+
+    .nome {
+      font-size: 1.05em;
+    }
+
+    .divNome {
+      margin: 10px 0;
+    }
+
+    .preco {
+      font-size: 1.6em;
+      font-weight: 500;
+    }
+
+    .precoAnterior {
+      font-size: 0.8em;
+      text-decoration: line-through;
+      color: dimgray;
+    }
+
+    .descontoDiv {
+      display: flex;
+      align-items: center;
+    }
+
+    .desconto {
+      color: green;
+      font-weight: 400;
+      margin-left: 10px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      justify-content: space-around;
+    }
+  }
+}
+
+.card:hover {
+  box-shadow: 0 3px 20px 0 rgba(189,189,189,1);
+  transition: box-shadow 0.3s ease-in-out;
+}

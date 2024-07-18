@@ -1,1 +1,48 @@
-<p>card works!</p>
+<div
+  class="card"
+>
+  <img
+    [src]="produto.imagem"
+    [alt]="produto.nome"
+    (click)="onClick()"
+  >
+
+  <hr>
+
+  <div class="content">
+    <div class="divNome">
+      <span class="nome" (click)="onClick()">{{ produto.nome }}</span>
+    </div>
+
+    @if (produto.desconto) {
+      <div>
+        <span class="precoAnterior" (click)="onClick()">{{ produto.preco | displayPreco }}</span>
+      </div>
+
+      <div class="descontoDiv">
+        <span class="preco" (click)="onClick()">{{ getPrecoDesconto(produto) | displayPreco }}</span>
+        <span class="desconto" (click)="onClick()">{{ getDescontoPorcentagem(produto) }}</span>
+      </div>
+    } @else {
+      <div>
+        <span class="preco" (click)="onClick()">{{ produto.preco | displayPreco }}</span>
+      </div>
+    }
+
+    <div class="buttons">
+      <p-button
+        label="Comprar"
+        size="small"
+        icon="pi pi-shopping-bag"
+        (onClick)="onComprar()"
+      />
+      <p-button
+        label="Carrinho"
+        size="small"
+        icon="pi pi-cart-arrow-down"
+        [outlined]="true"
+        (onClick)="onCarrinho()"
+      />
+    </div>
+  </div>
+</div>

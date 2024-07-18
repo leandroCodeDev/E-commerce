@@ -1,1 +1,25 @@
-<p>{{ valorPesquisa }}</p>
+<app-header />
+
+<main>
+  <div class="panel">
+    <p class="valorPesquisa">{{ valorPesquisa }}</p>
+    @if (produtosPesquisa.length > 0) {
+      @if (produtosPesquisa.length == 1) {
+        <p>1 produto encontrado.</p>
+      } @else {
+        <p>{{ produtosPesquisa.length}} produtos encontrados.</p>
+      }
+    } @else {
+      <p>Nenhum produto encontrado.</p>
+    }
+    <div class="produtos">
+      @if (produtosPesquisa.length > 0) {
+        @for (produto of produtosPesquisa; track produto.id) {
+          <app-card [produto]="produto" />
+        }
+      }
+    </div>
+  </div>
+</main>
+
+<app-footer />
