@@ -1,28 +1,50 @@
 <header class="header">
   <div class="logo" [routerLink]="'/home'">
-    <h1>LOGO<img src="" alt=""> </h1>
+    <img src="IMG.png" alt="">
   </div>
 
   <div class="pesquisar">
     <form (ngSubmit)="onSubmit()">
-      <input
-        type="text"
-        placeholder="Buscar produtos"
-        name="pesquisa"
-        [(ngModel)]="valorPesquisa"
-      >
-      <button type="submit">Pesquisar</button>
+      <p-inputGroup>
+        <input
+          type="text"
+          pInputText
+          placeholder="Buscar produtos"
+          name="pesquisa"
+          [(ngModel)]="valorPesquisa"
+        >
+        <button
+          type="submit"
+          pButton
+          icon="pi pi-search"
+        ></button>
+      </p-inputGroup>
     </form>
   </div>
 
   <div class="menu">
-    <button>Crie sua conta</button>
-    <button>Entrar</button>
-    <button [routerLink]="['/carrinho']">
-      Carrinho
-      @if (numItemsCarrinho) {
-        <span class="badgeCarrinho">{{ numItemsCarrinho }}</span>
-      }
-    </button>
+    <p-button
+      icon="pi pi-user-plus"
+      label="Criar sua conta"
+      size="small"
+      [rounded]="true"
+      [outlined]="true"
+    />
+    <p-button
+      icon="pi pi-sign-in"
+      label="Entrar"
+      size="small"
+      [rounded]="true"
+      [outlined]="true"
+    />
+    <p-button
+      icon="pi pi-shopping-cart"
+      label="Carrinho"
+      size="small"
+      [badge]="badgeValue"
+      badgeClass="p-badge-danger"
+      [rounded]="true"
+      [routerLink]="['/carrinho']"
+    />
   </div>
 </header>
