@@ -5,7 +5,6 @@ import {FooterComponent} from "../../shared/components/footer/footer.component";
 import {ProdutosService} from "../../shared/services/produtos/produtos.service";
 import {Produto} from "../../shared/interfaces/produto/produto";
 import {FormsModule} from "@angular/forms";
-import {PanelModule} from "primeng/panel";
 import {CardModule} from "primeng/card";
 import {Button} from "primeng/button";
 import {CardComponent} from "../../shared/components/card/card.component";
@@ -17,7 +16,6 @@ import {CardComponent} from "../../shared/components/card/card.component";
     HeaderComponent,
     FooterComponent,
     FormsModule,
-    PanelModule,
     CardModule,
     Button,
     RouterLink,
