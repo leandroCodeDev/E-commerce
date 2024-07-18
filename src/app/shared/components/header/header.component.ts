@@ -42,7 +42,6 @@ export class HeaderComponent {
         ['/lista-produtos'],
         { queryParams: { q: this.valorPesquisa } }
       );
-      let route = '/lista-produtos';
     }
   }
 }
