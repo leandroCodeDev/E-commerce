@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {Produto} from "../../interfaces/produto/produto";
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +9,12 @@ import { HttpClient } from '@angular/common/http';
 export class ProdutosService {
 
   constructor(private httpClient: HttpClient) { }
-  
+
   getTodosProtutos() {
-    return this.httpClient.get(`http://localhost:3000/produtos`)
+    return this.httpClient.get<Produto[]>(`http://localhost:3000/produtos`)
   }
 
   getProtutoId(id: string) {
-    return this.httpClient.get(`http://localhost:3000/produtos/${id}`)
+    return this.httpClient.get<Produto>(`http://localhost:3000/produtos/${id}`)
   }
 }
