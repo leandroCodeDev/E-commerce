@@ -28,15 +28,19 @@ export class HomeComponent {
   produtosPromocao:Array<Produto> = [];
   produtosVendidos:Array<Produto> = [];
   produtos:Array<Produto> = [];
-  produtosDaSemana:Array<Produto> = [];
+  // produtosDaSemana:Array<Produto> = [];
 
   vendas:Array<Vendas> = [];
 
   constructor(private produtosService:ProdutosService, private vendasService:VendasService){}
 
-
-  
   ngOnInit() {
+    this.produtosService.getTodosProtutos().subscribe(
+      (produtos) => {
+        this.produtos = produtos;
+      }
+    );
+
     this.produtosService.getProtutosPromocao().subscribe(
       (produtos) => {
         this.produtosPromocao = produtos;
@@ -46,19 +50,24 @@ export class HomeComponent {
     this.vendasService.getVendasOrdenadosByLimites(7).subscribe(
       (vendas) => {
         this.vendas = vendas;
-        let ids = this.vendas.map(item => item.produto_id)
-    
-        ids = ids.filter(function(item, i) {
-          return ids.indexOf(item) === i;
-        });
-        this.produtosService.getTodosProtutos().subscribe(
-          (produtos) => {
-            this.produtos = produtos;
-            this.produtosDaSemana = this.produtos.filter(item => ids.includes(item.id))   
-          }
-        );
       }
     );
+
+    this.produtosService.getTodosProtutos().subscribe(
+      (produtos) => {
+        this.produtos = produtos;
+      }
+    );
+  }
+
+  get produtosDaSemana() {
+    let ids = this.vendas.map(item => item.produto_id);
+
+    ids = ids.filter(function(item, i) {
+      return ids.indexOf(item) === i;
+    });
+
+    return this.produtos.filter(item => ids.includes(item.id));
   }
 
 }
