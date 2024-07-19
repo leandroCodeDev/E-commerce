@@ -39,9 +39,10 @@ section {
 
   .produtos {
     display: flex;
-    gap: 16px;
+    // gap: 16px;
     justify-content: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    overflow-y: auto;
 
     .produto-card {
       border: 1px solid #dee2e6;

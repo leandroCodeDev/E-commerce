@@ -28,16 +28,9 @@
 <section>
   <h2>Ofertas do Dia</h2>
   <div class="produtos">
-    <div class="produto-card">
-      <h3>Produto C</h3>
-      <p>Valor</p>
-      <button [routerLink]="['/detalhes']">Ver Detalhes</button>
-    </div>
-    <div class="produto-card">
-      <h3>Produto D</h3>
-      <p>Valor</p>
-      <button [routerLink]="['/detalhes']">Ver Detalhes</button>
-    </div>
-  </div>
+    @for (produto of produtosPromocao; track produto.id) {
+      <app-card [produto]="produto" />
+    }
+</div>
 </section>
 
