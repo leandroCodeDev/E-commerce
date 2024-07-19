@@ -17,4 +17,8 @@ export class ProdutosService {
   getProtutoId(id: string) {
     return this.httpClient.get<Produto>(`http://localhost:3000/produtos/${id}`)
   }
+
+  getProtutosPromocao() {
+    return this.httpClient.get<Array<Produto>>(`http://localhost:3000/produtos?promocao=true`)
+  }
 }
