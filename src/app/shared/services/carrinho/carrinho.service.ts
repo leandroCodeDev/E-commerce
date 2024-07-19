@@ -19,6 +19,10 @@ export class CarrinhoService {
   } 
 
 
+  getQuantidadeItemCarrinho(){
+    return this.carrinho.getValue().itens.length
+  }
+
   adicionarItemCarrinho(produto:Produto) {
 
     let valor = this.carrinho.getValue();
