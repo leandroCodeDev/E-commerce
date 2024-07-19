@@ -12,16 +12,9 @@
 <section>
   <h2>Mais Vendido da Semana</h2>
   <div class="produtos">
-    <div class="produto-card">
-      <h3>Produto A</h3>
-      <p>Valor</p>
-      <button [routerLink]="['/detalhes']">Ver Detalhes</button>
-    </div>
-    <div class="produto-card">
-      <h3>Produto B</h3>
-      <p>Valor</p>
-      <button [routerLink]="['/detalhes']">Ver Detalhes</button>
-    </div>
+    @for (produto of produtosDaSemana; track produto.id) {
+      <app-card [produto]="produto" />
+    }
   </div>
 </section>
 
