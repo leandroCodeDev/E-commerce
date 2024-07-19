@@ -3,6 +3,7 @@ import {Router, RouterLink} from "@angular/router";
 import {Produto} from "../../interfaces/produto/produto";
 import {DisplayPrecoPipe} from "../../pipes/display-preco/display-preco.pipe";
 import {Button} from "primeng/button";
+import { CarrinhoService } from '../../services/carrinho/carrinho.service';
 
 @Component({
   selector: 'app-card',
@@ -18,7 +19,7 @@ import {Button} from "primeng/button";
 export class CardComponent {
   @Input({required: true}) produto!: Produto;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,private carrinhoService:CarrinhoService) {}
 
   getPrecoDesconto(produto: Produto) {
     return produto.preco * (1 - produto.desconto);
@@ -36,10 +37,11 @@ export class CardComponent {
   }
 
   onComprar() {
-    // TODO
+    this.carrinhoService.adicionarItemCarrinho(this.produto)
+    this.router.navigate(['/carrinho'])
   }
 
   onCarrinho() {
-    // TODO
+    this.carrinhoService.adicionarItemCarrinho(this.produto)
   }
 }
