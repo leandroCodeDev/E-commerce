@@ -51,17 +51,12 @@ export class HomeComponent {
         ids = ids.filter(function(item, i) {
           return ids.indexOf(item) === i;
         });
-        
-      }
-    );
-  }
-
-
-  getProdutosDaSemana(ids:Array<string>){
-    this.produtosService.getTodosProtutos().subscribe(
-      (produtos) => {
-        this.produtos = produtos;
-        this.produtosDaSemana = this.produtos.filter(item => ids.includes(item.id))   
+        this.produtosService.getTodosProtutos().subscribe(
+          (produtos) => {
+            this.produtos = produtos;
+            this.produtosDaSemana = this.produtos.filter(item => ids.includes(item.id))   
+          }
+        );
       }
     );
   }
