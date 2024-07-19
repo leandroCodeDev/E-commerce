@@ -6,6 +6,7 @@ import {BadgeModule} from "primeng/badge";
 import {InputTextModule} from "primeng/inputtext";
 import {InputGroupModule} from "primeng/inputgroup";
 import {PanelModule} from "primeng/panel";
+import { CarrinhoService } from '../../services/carrinho/carrinho.service';
 
 @Component({
   selector: 'app-header',
@@ -25,9 +26,12 @@ import {PanelModule} from "primeng/panel";
 })
 export class HeaderComponent {
   valorPesquisa = '';
-  numItemsCarrinho = 1;
+  numItemsCarrinho = 0;
+  
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private carrinhoService:CarrinhoService) {
+    this.carrinhoService.carrinho.subscribe(() => this.numItemsCarrinho = this.carrinhoService.getQuantidadeItemCarrinho());
+  }
 
   get badgeValue() {
     if (this.numItemsCarrinho) {
