@@ -1,11 +1,12 @@
-<app-header />
 
 <div class="banner">
-  <div class="carousel">
-    <div class="carousel-item">Carrosel Oferta 1</div>
-    <div class="carousel-item">Carrosel Oferta 2</div>
-    <div class="carousel-item">Carrosel Oferta 3</div>
-  </div>
+  <p-carousel [value]="ofertas" [numVisible]="1" [numScroll]="1" [circular]="true" [autoplayInterval]="3000">
+    <ng-template pTemplate="item" let-oferta>
+      <div class="carrossel-item">
+        <img [src]="oferta.imgSrc" class="carrossel-imagem">
+      </div>
+    </ng-template>
+  </p-carousel>
 </div>
 
 <section>
@@ -39,6 +40,4 @@
     </div>
   </div>
 </section>
-
-<app-footer/>
 
