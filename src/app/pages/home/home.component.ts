@@ -8,6 +8,8 @@ import { TagModule } from 'primeng/tag';
 import { ProdutosService } from '../../shared/services/produtos/produtos.service';
 import { Produto } from '../../shared/interfaces/produto/produto';
 import { CardComponent } from '../../shared/components/card/card.component';
+import { VendasService } from '../../shared/services/vendas/vendas.service';
+import { Vendas } from '../../shared/interfaces/vendas/vendas';
 
 @Component({
   selector: 'app-home',
@@ -24,21 +26,51 @@ export class HomeComponent {
     { imgSrc: 'oferta2.jpg'}
   ];
   produtosPromocao:Array<Produto> = [];
+  produtosVendidos:Array<Produto> = [];
+  produtos:Array<Produto> = [];
+  // produtosDaSemana:Array<Produto> = [];
 
-  constructor(private produtosService:ProdutosService){}
+  vendas:Array<Vendas> = [];
 
+  constructor(private produtosService:ProdutosService, private vendasService:VendasService){}
 
-  
   ngOnInit() {
+    this.produtosService.getTodosProtutos().subscribe(
+      (produtos) => {
+        this.produtos = produtos;
+      }
+    );
+
     this.produtosService.getProtutosPromocao().subscribe(
       (produtos) => {
         this.produtosPromocao = produtos;
       }
     );
+
+    this.vendasService.getVendasOrdenadosByLimites(7).subscribe(
+      (vendas) => {
+        this.vendas = vendas;
+      }
+    );
+
+    this.produtosService.getTodosProtutos().subscribe(
+      (produtos) => {
+        this.produtos = produtos;
+      }
+    );
   }
 
+  get produtosDaSemana() {
+    let ids = this.vendas.map(item => item.produto_id);
 
-  getTopDaSemana(){
-    
+    ids = ids.filter(function(item, i) {
+      return ids.indexOf(item) === i;
+    });
+
+    return this.produtos.filter(item => ids.includes(item.id));
   }
+
 }
+
+
+

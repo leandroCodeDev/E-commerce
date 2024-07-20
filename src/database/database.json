@@ -206,31 +206,31 @@
       "id": "1",
       "produto_id": "4",
       "quantidade": "3",
-      "data": "2024-7-12"
+      "data": "2024-07-12"
     },
     {
       "id": "2",
       "produto_id": "15",
       "quantidade": "1",
-      "data": "2024-7-11"
+      "data": "2024-07-11"
     },
     {
       "id": "3",
       "produto_id": "15",
       "quantidade": "17",
-      "data": "2024-7-5"
+      "data": "2024-07-05"
     },
     {
       "id": "4",
       "produto_id": "11",
       "quantidade": "7",
-      "data": "2024-6-22"
+      "data": "2024-06-22"
     },
     {
       "id": "5",
       "produto_id": "1",
       "quantidade": "9",
-      "data": "2024-7-16"
+      "data": "2024-07-16"
     }
   ],
   "comentarios": [
