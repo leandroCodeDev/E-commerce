@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import {HeaderComponent} from "../../shared/components/header/header.component";
 import { FooterComponent } from "../../shared/components/footer/footer.component";
 import { CarouselModule } from 'primeng/carousel';
@@ -10,11 +10,12 @@ import { Produto } from '../../shared/interfaces/produto/produto';
 import { CardComponent } from '../../shared/components/card/card.component';
 import { VendasService } from '../../shared/services/vendas/vendas.service';
 import { Vendas } from '../../shared/interfaces/vendas/vendas';
+import { ButtonGroupModule } from 'primeng/buttongroup';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, HeaderComponent, FooterComponent, CarouselModule,CardComponent],
+  imports: [RouterLink, HeaderComponent, FooterComponent, CarouselModule, CardComponent, ButtonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -28,20 +29,20 @@ export class HomeComponent {
   produtosPromocao:Array<Produto> = [];
   produtosVendidos:Array<Produto> = [];
   produtos:Array<Produto> = [];
-  // produtosDaSemana:Array<Produto> = [];
+  //produtosDaSemana:Array<Produto> = [];
 
   vendas:Array<Vendas> = [];
 
-  constructor(private produtosService:ProdutosService, private vendasService:VendasService){}
+  constructor(private produtosService:ProdutosService, private vendasService:VendasService, private router: Router){}
 
   ngOnInit() {
-    this.produtosService.getTodosProtutos().subscribe(
+    this.produtosService.getTodosProdutos().subscribe(
       (produtos) => {
         this.produtos = produtos;
       }
     );
 
-    this.produtosService.getProtutosPromocao().subscribe(
+    this.produtosService.getProdutosPromocao().subscribe(
       (produtos) => {
         this.produtosPromocao = produtos;
       }
@@ -53,7 +54,7 @@ export class HomeComponent {
       }
     );
 
-    this.produtosService.getTodosProtutos().subscribe(
+    this.produtosService.getTodosProdutos().subscribe(
       (produtos) => {
         this.produtos = produtos;
       }
@@ -70,7 +71,7 @@ export class HomeComponent {
     return this.produtos.filter(item => ids.includes(item.id));
   }
 
+  listaTodosProdutos() {
+    this.router.navigate(['/lista-produtos'], { state: { produtos: this.produtos } });
+  }
 }
-
-
-
