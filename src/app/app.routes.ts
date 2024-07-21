@@ -7,24 +7,19 @@ import { ListagemProdutosComponent } from './pages/listagem-produtos/listagem-pr
 export const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent,
-    data: { breadcrumb: 'Home' }
+    component: HomeComponent
   },
   {
     path: 'detalhes',
-    component: DetalhesProdutosComponent,
-    data: { breadcrumb: 'Detalhes do produto' }
+    component: DetalhesProdutosComponent
   },
   {
     path: 'carrinho',
-    component: CarrinhoComponent,
-    data: { breadcrumb: 'Carrinho' }
+    component: CarrinhoComponent
   },
   {
     path: 'lista-produtos',
-    component: ListagemProdutosComponent,
-    data: { breadcrumb: 'Produtos' }
-
+    component: ListagemProdutosComponent
   },
   {
     path:'**',
