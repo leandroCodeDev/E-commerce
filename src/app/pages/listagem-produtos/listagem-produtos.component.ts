@@ -34,17 +34,25 @@ export class ListagemProdutosComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    const listaTodosProdutos = history.state;
+
+    if (listaTodosProdutos.produtos) {
+      this.produtos = listaTodosProdutos.produtos;
+    } else {
+      this.produtosService.getTodosProdutos().subscribe(
+        (produtos) => {
+          this.produtos = produtos;
+        }
+      );
+    }
+
     this.route.queryParams.subscribe(
       params => {
         this.valorPesquisa = params['q'] || '';
       }
     );
 
-    this.produtosService.getTodosProtutos().subscribe(
-      (produtos) => {
-        this.produtos = produtos;
-      }
-    );
+  
   }
 
   get produtosPesquisa() {
