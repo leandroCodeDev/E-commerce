@@ -1,0 +1,212 @@
+{
+    "uuid": "f834a6a2-4242-486a-9cfc-e5279c69dd8f",
+    "lastMigration": 32,
+    "name": "Produtos",
+    "endpointPrefix": "",
+    "latency": 0,
+    "port": 3001,
+    "hostname": "",
+    "folders": [],
+    "routes": [
+        {
+            "uuid": "90f876a8-d6d7-4f28-ad75-546e381d371d",
+            "type": "http",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "",
+            "responses": [
+                {
+                    "uuid": "edff462e-2ab4-44fd-89ec-70437cbf0220",
+                    "body": "{}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null
+        },
+        {
+            "uuid": "4aef7522-f332-4077-903c-4bcf4894c802",
+            "type": "http",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "produtos",
+            "responses": [
+                {
+                    "uuid": "8f0d60b7-06f4-4f3e-bf29-54aa8cc36177",
+                    "body": "[{\r\n\t\"id\": 1,\r\n\t\"nome\": \"Teste\",\r\n\t\"imagem\": \"https://lojapapelex.vtexassets.com/arquivos/ids/247850-1200-auto?v=638442279283370000&width=1200&height=auto&aspect=true\",\r\n\t\"descricao\": \"Descrição teste\",\r\n\t\"preco\": 12.45,\r\n\t\"unidadeDisponiveis\": 2,\r\n\t\"promocao\": false,\r\n\t\"desconto\": 0\r\n}, {\r\n\t\"id\": 2,\r\n\t\"nome\": \"Teste 2\",\r\n\t\"imagem\": \"https://images.tcdn.com.br/img/img_prod/694483/kit_produto_teste_nao_comprar_8809_1_2e10ccacb56b37e64bdc18426ac3792c.png\",\r\n\t\"descricao\": \"Descrição teste\",\r\n\t\"preco\": 12.45,\r\n\t\"unidadeDisponiveis\": 2,\r\n\t\"promocao\": false,\r\n\t\"desconto\": 0\r\n},\r\n{\r\n\t\"id\": 3,\r\n\t\"nome\": \"Teste 3\",\r\n\t\"imagem\": \"https://lojapapelex.vtexassets.com/arquivos/ids/247850-1200-auto?v=638442279283370000&width=1200&height=auto&aspect=true\",\r\n\t\"descricao\": \"Descrição teste\",\r\n\t\"preco\": 12.45,\r\n\t\"unidadeDisponiveis\": 2,\r\n\t\"promocao\": false,\r\n\t\"desconto\": 0\r\n}, {\r\n\t\"id\": 4,\r\n\t\"nome\": \"Teste 4\",\r\n\t\"imagem\": \"https://images.tcdn.com.br/img/img_prod/694483/kit_produto_teste_nao_comprar_8809_1_2e10ccacb56b37e64bdc18426ac3792c.png\",\r\n\t\"descricao\": \"Descrição teste\",\r\n\t\"preco\": 12.45,\r\n\t\"unidadeDisponiveis\": 2,\r\n\t\"promocao\": false,\r\n\t\"desconto\": 0\r\n}, \r\n{ \r\n  \"id\": 1,\r\n\t\"nome\": \"Louis Vuitton 3\",\r\n\t\"imagem\": \"https://br.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-bolsa-neverfull-mm-damier-%C3%A9b%C3%A8ne-bolsas--N40599_PM2_Front%20view.png?wid=1090&hei=1090\",\r\n\t\"descricao\": \"A bolsa tote Neverfull MM combina um design atemporal com detalhes clássicos. No elegante canvas Damier Ébène com acabamento em couro natural, este modelo espaçoso traz cordões laterais, que podem ser puxados para um visual refinado ou deixados soltos para compor um look casual. Alças finas e confortáveis facilitam o uso no ombro ou braço. Com forro em tecido colorido, a peça vem com uma bolsa removível que se transforma em clutch ou bolso extra.\",\r\n\t\"preco\": 25,\r\n\t\"unidadeDisponiveis\": 2,\r\n\t\"promocao\": false,\r\n\t\"desconto\": 0}\r\n\t]",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null
+        },
+        {
+            "uuid": "7d3e4928-af9c-4666-bc3d-d6aecfb8c892",
+            "type": "http",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "produtos/2",
+            "responses": [
+                {
+                    "uuid": "c0ffb449-ffc1-4459-b762-274e06ba966b",
+                    "body": "{\r\n\t\"id\": 1,\r\n\t\"nome\": \"Louis Vuitton\",\r\n\t\"imagem\": \"https://br.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-bolsa-neverfull-mm-damier-%C3%A9b%C3%A8ne-bolsas--N40599_PM2_Front%20view.png?wid=1090&hei=1090\",\r\n\t\"descricao\": \"A bolsa tote Neverfull MM combina um design atemporal com detalhes clássicos. No elegante canvas Damier Ébène com acabamento em couro natural, este modelo espaçoso traz cordões laterais, que podem ser puxados para um visual refinado ou deixados soltos para compor um look casual. Alças finas e confortáveis facilitam o uso no ombro ou braço. Com forro em tecido colorido, a peça vem com uma bolsa removível que se transforma em clutch ou bolso extra.\",\r\n\t\"preco\": 747,\r\n\t\"unidadeDisponiveis\": 2,\r\n\t\"promocao\": false,\r\n\t\"desconto\": 0\r\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null
+        },
+        {
+            "uuid": "54d6421d-7fe1-4559-82e1-4685e5e2efb3",
+            "type": "http",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "produtos/3",
+            "responses": [
+                {
+                    "uuid": "f8051b8a-fc78-44a3-9b19-81bc98fd0dba",
+                    "body": "{\r\n\t\"id\": 1,\r\n\t\"nome\": \"Louis Vuitton 3\",\r\n\t\"imagem\": \"https://br.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-bolsa-neverfull-mm-damier-%C3%A9b%C3%A8ne-bolsas--N40599_PM2_Front%20view.png?wid=1090&hei=1090\",\r\n\t\"descricao\": \"A bolsa tote Neverfull MM combina um design atemporal com detalhes clássicos. No elegante canvas Damier Ébène com acabamento em couro natural, este modelo espaçoso traz cordões laterais, que podem ser puxados para um visual refinado ou deixados soltos para compor um look casual. Alças finas e confortáveis facilitam o uso no ombro ou braço. Com forro em tecido colorido, a peça vem com uma bolsa removível que se transforma em clutch ou bolso extra.\",\r\n\t\"preco\": 25,\r\n\t\"unidadeDisponiveis\": 2,\r\n\t\"promocao\": false,\r\n\t\"desconto\": 0\r\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null
+        },
+        {
+            "uuid": "0b1c6e51-57a8-4743-93f8-6da01dfacf9f",
+            "type": "http",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "produtos/1",
+            "responses": [
+                {
+                    "uuid": "0f6a43e3-36a0-479b-82a5-7d55375f9b19",
+                    "body": "{\r\n\t\"id\": 1,\r\n\t\"nome\": \"Louis Vuitton\",\r\n\t\"imagem\": \"https://br.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-bolsa-neverfull-mm-damier-%C3%A9b%C3%A8ne-bolsas--N40599_PM2_Front%20view.png?wid=1090&hei=1090\",\r\n\t\"descricao\": \"A bolsa tote Neverfull MM combina um design atemporal com detalhes clássicos. No elegante canvas Damier Ébène com acabamento em couro natural, este modelo espaçoso traz cordões laterais, que podem ser puxados para um visual refinado ou deixados soltos para compor um look casual. Alças finas e confortáveis facilitam o uso no ombro ou braço. Com forro em tecido colorido, a peça vem com uma bolsa removível que se transforma em clutch ou bolso extra.\",\r\n\t\"preco\": 747,\r\n\t\"unidadeDisponiveis\": 2,\r\n\t\"promocao\": false,\r\n\t\"desconto\": 0\r\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null
+        }
+    ],
+    "rootChildren": [
+        {
+            "type": "route",
+            "uuid": "90f876a8-d6d7-4f28-ad75-546e381d371d"
+        },
+        {
+            "type": "route",
+            "uuid": "4aef7522-f332-4077-903c-4bcf4894c802"
+        },
+        {
+            "type": "route",
+            "uuid": "0b1c6e51-57a8-4743-93f8-6da01dfacf9f"
+        },
+        {
+            "type": "route",
+            "uuid": "7d3e4928-af9c-4666-bc3d-d6aecfb8c892"
+        },
+        {
+            "type": "route",
+            "uuid": "54d6421d-7fe1-4559-82e1-4685e5e2efb3"
+        }
+    ],
+    "proxyMode": false,
+    "proxyHost": "",
+    "proxyRemovePrefix": false,
+    "tlsOptions": {
+        "enabled": false,
+        "type": "CERT",
+        "pfxPath": "",
+        "certPath": "",
+        "keyPath": "",
+        "caPath": "",
+        "passphrase": ""
+    },
+    "cors": true,
+    "headers": [
+        {
+            "key": "Content-Type",
+            "value": "application/json"
+        }
+    ],
+    "proxyReqHeaders": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "proxyResHeaders": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "data": [],
+    "callbacks": []
+}
