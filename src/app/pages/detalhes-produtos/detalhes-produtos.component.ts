@@ -28,7 +28,7 @@ export class DetalhesProdutosComponent {
   }
 
   ngOnInit() {
-    this.produtosService.getProtutoId(this.productId).subscribe(
+    this.produtosService.getProdutoId(this.productId).subscribe(
       (produtos) => {
         this.produto = produtos;
       }
