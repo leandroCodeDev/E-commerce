@@ -1,0 +1,78 @@
+<div id="carrinho">
+    <div id="produtos">
+        <ul id="lista de produtos">
+            @if (carrinho.itens.length) {
+            <h3 class="titulo">Produtos</h3>
+            <li *ngFor="let produto of carrinho.itens">
+                <div class="separador"></div>
+                <section class="produto">
+                    <div id="informacoes">
+                        <img [src]="produto.imagem">
+                        <div id="nome">
+                            <p>{{ produto.nome }}</p>
+                            <div id="botoes">
+                                <button class="botao" (click)="excluirProduto(produto)">Excluir</button>
+                                <button class="botao">Comprar</button>
+                            </div>
+                        </div>
+                    </div>    
+                    <div id="quantidade">
+                        <button [ngStyle]="{ 'color': produto.quantidade != 1 ? '#3B82F6' : 'gray', 'cursor': produto.quantidade != 1 ? 'pointer' : 'auto'}" (click)="removerProduto(produto)" class="quantidadeButton">-</button>
+                        <p class="quantidadeNumero">{{ produto.quantidade }}</p>
+                        <button (click)="adicionarProduto(produto)" class="quantidadeButton">+</button>
+                    </div>
+                    <div>
+                        @if (produto.desconto) {
+                            <p class="precoAnterior">{{ calcularPrecoQuantidade(produto) | displayPreco }}</p>
+                            <p class="preco">{{ getPrecoDesconto(calcularPrecoQuantidade(produto), produto.desconto) | displayPreco }}</p>
+                        } @else {
+                            <p class="preco">{{ calcularPrecoQuantidade(produto)| displayPreco }}</p>  
+                        }
+                    </div>
+                </section>
+            </li>
+        } @else {
+            <div id="carrinhoVazio">
+                <h3 id="mensagemCarrinhoVazio">O carrinho está vazio</h3>
+            </div>
+            <button [routerLink]="'/home'" id="botaoCarrinhoVazio">Iniciar Busca</button>
+        }
+        </ul>
+    </div>
+    <div id="resumoCompra">
+        <ul id="lista de produtos">
+            @if (carrinho.itens.length) {
+            <h3 class="titulo">Resumo da compra</h3>
+            <div class="separador"></div>
+            <li *ngFor="let produto of carrinho.itens">
+                <div class="resumoProduto">
+                    <p class="resumoProdutoNome">{{ produto.nome }}</p>
+                    @if (produto.desconto) {
+                        <p class="resumoProdutoPreco">{{ getPrecoDesconto(calcularPrecoQuantidade(produto), produto.desconto) | displayPreco }}</p>
+                    } @else {
+                        <p class="resumoProdutoPreco">{{ calcularPrecoQuantidade(produto) | displayPreco }}</p>  
+                    }
+                </div>
+            </li>
+            <li>
+                <div id="frete">
+                    <p>Frete</p>
+                    <p id="fretePreco">{{ frete }}</p>
+                </div>
+            </li>
+            <div class="separador"></div>
+            <li>
+                <div id="total">
+                    <p>Total</p>
+                    <p id="totalPreco"> {{ total }}</p>
+                </div>
+            </li>
+        } @else {
+            <div id="carrinhoVazio">
+                <h3 id="mensagemCarrinhoVazio">O carrinho está vazio</h3>
+            </div>
+        }
+        </ul>
+        <button *ngIf="carrinho.itens.length" id="continuarCompra">Continuar a compra</button>
+    </div>
+</div>

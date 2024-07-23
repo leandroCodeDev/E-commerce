@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+<section>
+    <div class="row">
+        <div class="column image-column">
+            <img class="product-img" src="{{ produto.imagem }}">
+        </div>
+        <div class="column">
+            <h2>{{ produto.nome }}</h2>
+            <span class="price price--number"><span class="price price--dolar">$</span>{{produto.preco}}</span>
+
+            <h3>Descrição do produto</h3>
+
+            <p>
+                {{produto.descricao}}
+            </p>
+            <br/>
+            <p-button
+            label="Comprar"
+            size="small"
+            icon="pi pi-shopping-bag"
+            (onClick)="onComprar()"
+          ></p-button>
+          <p-button
+            label="Carrinho"
+            size="small"
+            icon="pi pi-cart-arrow-down"
+            [outlined]="true"
+            (onClick)="onCarrinho()"
+          ></p-button>
+            @for (comentario of comentarios; track comentario.id ){
+              <hr />
+              <div class="testimonial-container">
+                <p class="testimonial">
+                  {{comentario.comentario}}
+                </p>
+                <div class="user">
+                    <img [src]="comentario.image" alt="user" class="user-image" />
+                    <div class="user-details">
+                        <h4 class="username">{{comentario.nome}}</h4>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,179 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+
+.column {
+  flex: 1;
+  padding: 5px;
+  min-width: 240px;
+  box-sizing: border-box;
+}
+
+.image-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-img {
+  max-width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+.price {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.price--number {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.price--dolar {
+  font-size: 0.8rem;
+  margin-top: 0.4em;
+  font-weight: 500;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.stars {
+  font-size: 12px;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  height: 100%;
+  line-height: 20px;
+  margin: 0;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.user .user-image {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+}
+
+.user .user-details {
+  text-align: center;
+}
+
+.user .username {
+  margin: 0;
+  font-size: 12px;
+}
+
+.user .role {
+  margin: 0;
+  font-size: 10px;
+}
+
+.progress-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.progress-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.progress-dot.active {
+  background-color: #555;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #eee;
+}
+
+#btn-prev {
+  left: 25px;
+}
+
+#btn-next {
+  right: 25px;
+}
+
+
+@media (max-width: 768px) {
+  .testimonial-container {
+      padding: 10px;
+  }
+
+  .price--number {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .price--number {
+      font-size: 1.2rem;
+  }
+
+  .price--dolar {
+      font-size: 0.6rem;
+  }
+
+  .testimonial-container {
+      padding: 5px;
+  }
+
+  .user .user-image {
+      height: 30px;
+      width: 30px;
+  }
+
+  .user .username {
+      font-size: 10px;
+  }
+
+  .user .role {
+      font-size: 8px;
+  }
+}

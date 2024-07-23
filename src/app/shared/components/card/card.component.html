@@ -1,0 +1,48 @@
+<div class="card-container">
+  <p-card>
+    <img
+      [src]="produto.imagem"
+      [alt]="produto.nome"
+      (click)="onClick()"
+      class="product-image"
+    >
+    <p-divider></p-divider>
+    
+    <div class="content">
+      <div class="divNome">
+        <span class="nome" (click)="onClick()">{{ produto.nome }}</span>
+      </div>
+      <ng-container *ngIf="produto.desconto">
+        <div>
+          <span class="precoAnterior" (click)="onClick()">{{ produto.preco | displayPreco }}</span>
+        </div>
+        <div class="descontoDiv">
+          <span class="preco" (click)="onClick()">{{ getPrecoDesconto(produto) | displayPreco }}</span>
+          <span class="desconto" (click)="onClick()">{{ getDescontoPorcentagem(produto) }}</span>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="!produto.desconto">
+        <div>
+          <span class="preco" (click)="onClick()">{{ produto.preco | displayPreco }}</span>
+        </div>
+      </ng-container>
+      <div class="buttons">
+        <p-button
+          label="Comprar"
+          size="small"
+          icon="pi pi-shopping-bag"
+          (onClick)="onComprar()"
+        ></p-button>
+        <p-button
+          label="Carrinho"
+          size="small"
+          icon="pi pi-cart-arrow-down"
+          [outlined]="true"
+          (onClick)="onCarrinho()"
+        ></p-button>
+      </div>
+    </div>
+  </p-card>
+</div>
+
+

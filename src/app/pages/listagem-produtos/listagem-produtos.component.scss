@@ -1,0 +1,38 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 50vh;
+  padding: 50px;
+
+  .panel {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #e5e7eb;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 1400px;
+    gap: 10px;
+
+    p {
+      margin: 5px;
+    }
+
+    .valorPesquisa {
+      font-size: 1.1em;
+      font-weight: 500;
+      margin-top: 15px;
+    }
+
+    .produtos {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+}
