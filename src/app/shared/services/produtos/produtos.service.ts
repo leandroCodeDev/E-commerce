@@ -10,15 +10,15 @@ export class ProdutosService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getTodosProtutos() {
+  getTodosProdutos() {
     return this.httpClient.get<Produto[]>(`http://localhost:3000/produtos`)
   }
 
-  getProtutoId(id: string) {
+  getProdutoId(id: string) {
     return this.httpClient.get<Produto>(`http://localhost:3000/produtos/${id}`)
   }
 
-  getProtutosPromocao() {
+  getProdutosPromocao() {
     return this.httpClient.get<Array<Produto>>(`http://localhost:3000/produtos?promocao=true`)
   }
 }

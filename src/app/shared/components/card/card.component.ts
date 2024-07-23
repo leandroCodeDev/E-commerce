@@ -4,6 +4,9 @@ import {Produto} from "../../interfaces/produto/produto";
 import {DisplayPrecoPipe} from "../../pipes/display-preco/display-preco.pipe";
 import {Button} from "primeng/button";
 import { CarrinhoService } from '../../services/carrinho/carrinho.service';
+import { CardModule } from 'primeng/card';
+import { DividerModule } from 'primeng/divider';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-card',
@@ -11,7 +14,10 @@ import { CarrinhoService } from '../../services/carrinho/carrinho.service';
   imports: [
     RouterLink,
     DisplayPrecoPipe,
-    Button
+    CommonModule,
+    Button,
+    CardModule,
+    DividerModule
   ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'

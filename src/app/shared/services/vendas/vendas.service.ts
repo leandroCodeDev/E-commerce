@@ -10,13 +10,12 @@ export class VendasService {
   constructor(private httpClient: HttpClient) {}
 
     getTodasVendas() {
-      return this.httpClient.get(`http://localhost:3000/vendas`)
+      return this.httpClient.get<Vendas[]>(`http://localhost:3000/vendas`)
     }
-
 
     getVendasOrdenadosByLimites(limite:number) {
       return this.httpClient.get<Array<Vendas>>(`http://localhost:3000/vendas?_sort=-data&_limit=${limite}`)
     }
 
-    
+
 }

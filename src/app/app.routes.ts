@@ -20,7 +20,6 @@ export const routes: Routes = [
   {
     path: 'lista-produtos',
     component: ListagemProdutosComponent
-
   },
   {
     path:'**',
