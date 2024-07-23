@@ -2,68 +2,46 @@
 
 <section>
     <div class="row">
-        <div class="column">
+        <div class="column image-column">
             <img class="product-img" src="{{ produto.imagem }}">
         </div>
         <div class="column">
             <h2>{{ produto.nome }}</h2>
             <span class="price price--number"><span class="price price--dolar">$</span>{{produto.preco}}</span>
-            
-            <h3 style="margin-top: 10px;">Descrição do produto</h3>
-            
-            <p style="margin-right: 5%;">
+
+            <h3>Descrição do produto</h3>
+
+            <p>
                 {{produto.descricao}}
             </p>
             <br/>
-            <br/>
             <p-button
-                label="Adicionar ao Carrinho"
-                size="large"
-                icon="pi pi-cart-arrow-down"
-                [outlined]="true"
-                (onClick)="onCarrinho()"
-            />
-            <hr />
-            <div class="testimonial-container">
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
+            label="Comprar"
+            size="small"
+            icon="pi pi-shopping-bag"
+            (onClick)="onComprar()"
+          ></p-button>
+          <p-button
+            label="Carrinho"
+            size="small"
+            icon="pi pi-cart-arrow-down"
+            [outlined]="true"
+            (onClick)="onCarrinho()"
+          ></p-button>
+            @for (comentario of comentarios; track comentario.id ){
+              <hr />
+              <div class="testimonial-container">
                 <p class="testimonial">
-                    Bolsa linda! compraria 7! Qualidade impressionante e entrega rapida! Recomendo!
+                  {{comentario.comentario}}
                 </p>
                 <div class="user">
-                    <img src="https://randomuser.me/api/portraits/women/46.jpg" alt="user" class="user-image" />
+                    <img [src]="comentario.image" alt="user" class="user-image" />
                     <div class="user-details">
-                    <h4 class="username">Miyah Myles</h4>
-                    <p class="role">Marketing</p>
+                        <h4 class="username">{{comentario.nome}}</h4>
                     </div>
                 </div>
-                <div class="progress-dots" id="progress-dots"></div>
             </div>
-            <hr />
-            <div class="testimonial-container">
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="testimonial">
-                    Muito boa, mas poderia ser mais acessível!
-                </p>
-                <div class="user">
-                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="user" class="user-image" />
-                    <div class="user-details">
-                    <h4 class="username">Karen Moreira</h4>
-                    <p class="role">Fashion Model</p>
-                    </div>
-                </div>
-                <div class="progress-dots" id="progress-dots"></div>
-            </div>
+            }
         </div>
-      </div> 
+    </div>
 </section>
