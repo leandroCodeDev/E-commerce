@@ -33,6 +33,8 @@ export class ListagemProdutosComponent implements OnInit {
     private produtosService: ProdutosService
   ) {}
 
+
+  
   ngOnInit() {
     const listaTodosProdutos = history.state;
 
